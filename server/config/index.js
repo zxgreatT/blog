@@ -2,7 +2,7 @@ const devMode = process.env.NODE_ENV === 'development'
 
 const config = {
   PORT: 6060, // 启动端口
-  ADMIN_GITHUB_LOGIN_NAME: 'gershonv', // 博主的 github 登录的账户名 user
+  ADMIN_GITHUB_LOGIN_NAME: 'zxgreatT', // 博主的 github 登录的账户名 user
   GITHUB: {
     client_id: 'c6a96a84105bb0be1fe5',
     client_secret: '463f3994ab5687544b2cddbb6cf44920bf179ad9',
@@ -32,9 +32,9 @@ const config = {
     expiresIn: '720h' // token 有效期
   },
   DATABASE: {
-    database: 'test',
+    database: 'blog',
     user: 'root',
-    password: '123456',
+    password: '123',
     options: {
       host: 'localhost', // 连接的 host 地址
       dialect: 'mysql', // 连接到 mysql
@@ -60,9 +60,9 @@ if (!devMode) {
   // ==== 配置数据库
   config.DATABASE = {
     ...config.DATABASE,
-    database: '', // 数据库名
-    user: '', // 账号
-    password: '' // 密码
+    database: 'blog', // 数据库名
+    user: 'root', // 账号
+    password: '123' // 密码
   }
 
   // 配置 github 授权
