@@ -55,6 +55,7 @@ function SignModal(props) {
   function githubLogin() {
     const { pathname, search } = location
     save('prevRouter', `${pathname}${search}`)
+    console.log(window.location.href)
     window.location.href = `${GITHUB.url}?client_id=${GITHUB.client_id}`
   }
 

@@ -9,12 +9,12 @@ import MyInfo from '@/views/web/about/MyInfo'
 export const API_BASE_URL = 'http://127.0.0.1:6060'
 
 // project config
-export const HEADER_BLOG_NAME = '郭大大的博客' // header title 显示的名字
+export const HEADER_BLOG_NAME = 'GreatT的博客' // header title 显示的名字
 
 // === sidebar
 export const SIDEBAR = {
   avatar: require('@/assets/images/avatar.jpeg'), // 侧边栏头像
-  title: '郭大大', // 标题
+  title: 'GreatT', // 标题
   subTitle: '前端打杂人员，略微代码洁癖', // 子标题
   // 个人主页
   homepages: {
@@ -37,7 +37,7 @@ export const DISCUSS_AVATAR = SIDEBAR.avatar // 评论框博主头像
  */
 export const GITHUB = {
   enable: true, // github 第三方授权开关
-  client_id: 'c6a96a84105bb0be1fe5', // Setting > Developer setting > OAuth applications => client_id
+  client_id: '6d5c0f74c0968e381459', // Setting > Developer setting > OAuth applications => client_id
   url: 'https://github.com/login/oauth/authorize' // 跳转的登录的地址
 }
 

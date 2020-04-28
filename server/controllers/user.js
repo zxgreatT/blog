@@ -44,6 +44,7 @@ class UserController {
   static async login(ctx) {
     const { code } = ctx.request.body
     if (code) {
+      console.log(code)
       await UserController.githubLogin(ctx, code)
     } else {
       await UserController.defaultLogin(ctx)
@@ -86,6 +87,7 @@ class UserController {
 
   // github 登录
   static async githubLogin(ctx, code) {
+    console.log(code, GITHUB.client_id, GITHUB.client_secret)
     const result = await axios.post(GITHUB.access_token_url, {
       client_id: GITHUB.client_id,
       client_secret: GITHUB.client_secret,
@@ -93,12 +95,13 @@ class UserController {
     })
 
     const { access_token } = decodeQuery(result.data)
-
+    console.log(result.data)
     if (access_token) {
+      console.log(access_token)
       // 拿到 access_token 去获取用户信息
       const result2 = await axios.get(`${GITHUB.fetch_user_url}?access_token=${access_token}`)
       const githubInfo = result2.data
-
+      console.log(githubInfo)
       let target = await UserController.find({ id: githubInfo.id }) // 在数据库中查找该用户是否存在
 
       if (!target) {
@@ -265,7 +268,7 @@ class UserController {
         UserController.createGithubUser(github, 1)
       }
     } catch (error) {
-      console.trace('create github user error ==============>', error.message)
+      // console.trace('create github user error ==============>', error.message)
     }
   }
 }

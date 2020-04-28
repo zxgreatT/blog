@@ -2,10 +2,10 @@ const devMode = process.env.NODE_ENV === 'development'
 
 const config = {
   PORT: 6060, // 启动端口
-  ADMIN_GITHUB_LOGIN_NAME: 'zxgreatT', // 博主的 github 登录的账户名 user
+  ADMIN_GITHUB_LOGIN_NAME: 'gershonv', // 博主的 github 登录的账户名 user
   GITHUB: {
-    client_id: 'c6a96a84105bb0be1fe5',
-    client_secret: '463f3994ab5687544b2cddbb6cf44920bf179ad9',
+    client_id: '6d5c0f74c0968e381459',
+    client_secret: 'c88b6b6d343b5390a1846dc6ed97157440336a01',
     access_token_url: 'https://github.com/login/oauth/access_token',
     fetch_user_url: 'https://api.github.com/user', // 用于 oauth2
     fetch_user: 'https://api.github.com/users/' // fetch user url https://api.github.com/users/gershonv
@@ -13,17 +13,18 @@ const config = {
   EMAIL_NOTICE: {
     // 邮件通知服务
     // detail: https://nodemailer.com/
-    enable: true, // 开关
+    enable: false, // 开关
     transporterConfig: {
-      host: 'smtp.163.com',
+      host: 'smtp.qq.email',
+      service:'qq',
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'guodadablog@163.com', // generated ethereal user
-        pass: '123456' // generated ethereal password 授权码 而非 密码
+        user: '906431137@qq.com', // generated ethereal user
+        pass: 'pkenwbbkwfjzbcdb' // generated ethereal password 授权码 而非 密码
       }
     },
-    subject: '郭大大的博客 - 您的评论获得新的回复！', // 主题
+    subject: 'GreatT的博客 - 您的评论获得新的回复！', // 主题
     text: '您的评论获得新的回复！',
     WEB_HOST: 'http://127.0.0.1:3000' // email callback url
   },
