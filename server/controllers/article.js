@@ -96,6 +96,7 @@ class ArticleController {
 
       // JSON.parse(github)
       data.comments.forEach(comment => {
+        console.log('👌',comment.user)
         comment.user.github = JSON.parse(comment.user.github)
         comment.replies.forEach(reply => {
           reply.user.github = JSON.parse(reply.user.github)

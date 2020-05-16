@@ -4,7 +4,6 @@ module.exports = (sequelize, dataTypes) => {
   const User = sequelize.define(
     'user',
     {
-      // id sequelize 默认创建...
       id: {
         type: dataTypes.INTEGER(11),
         primaryKey: true,
@@ -13,17 +12,16 @@ module.exports = (sequelize, dataTypes) => {
       username: {
         type: dataTypes.STRING(50),
         allowNull: false
-        // unique: true
       },
       password: {
         type: dataTypes.STRING,
-        comment: '通过 bcrypt 加密后的密码' // 仅限站内注册用户
+        comment: '通过 bcrypt 加密后的密码' 
       },
       email: {
         type: dataTypes.STRING(50)
       },
       notice: {
-        type: dataTypes.BOOLEAN, // 是否开启邮件通知
+        type: dataTypes.BOOLEAN, 
         defaultValue: true
       },
       role: {
@@ -32,10 +30,10 @@ module.exports = (sequelize, dataTypes) => {
         comment: '用户权限：1 - admin, 2 - 普通用户'
       },
       github: {
-        type: dataTypes.TEXT // github 登录用户 直接绑定在 user 表
+        type: dataTypes.TEXT 
       },
       disabledDiscuss: {
-        type: dataTypes.BOOLEAN, // 是否禁言
+        type: dataTypes.BOOLEAN, 
         defaultValue: false
       },
       createdAt: {

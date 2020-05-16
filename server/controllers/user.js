@@ -12,6 +12,7 @@ const { user: UserModel, comment: CommentModel, reply: ReplyModel, ip: IpModel, 
  */
 async function getGithubInfo(username) {
   const result = await axios.get(`${GITHUB.fetch_user}${username}`)
+  console.log(result.data)
   return result && result.data
 }
 
@@ -95,7 +96,7 @@ class UserController {
     })
 
     const { access_token } = decodeQuery(result.data)
-    console.log(result.data)
+    
     if (access_token) {
       console.log(access_token)
       // 拿到 access_token 去获取用户信息
