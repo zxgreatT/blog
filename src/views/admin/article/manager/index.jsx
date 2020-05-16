@@ -85,7 +85,7 @@ function ArticleManager(props) {
                 <a onClick={e => output(record.id, record.title)}>导出</a>
               </li>
               <li>
-                <Popconfirm title='Are you sure？' cancelText='No' onConfirm={e => updateList(() => axios.delete(`/article/${articleId}`))}>
+                <Popconfirm title='是否删除该文章' cancelText='No' onConfirm={e => updateList(() => axios.delete(`/article/${articleId}`))}>
                   <a className='delete-text'>删除</a>
                 </Popconfirm>
               </li>
@@ -185,7 +185,7 @@ function ArticleManager(props) {
                 <>
                   <Button type='primary' size='small' style={{ marginRight: 8 }} disabled={selectedRowKeys.length === 0} onClick={outputSelected}>导出选中项</Button>
                   <Popconfirm
-                    title='Are you sure delete the articles?'
+                    title='是否全部删除这些文章'
                     onConfirm={delList}
                     // onCancel={cancel}
                     okText='Yes'

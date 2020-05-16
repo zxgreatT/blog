@@ -8,7 +8,7 @@ import { getToken } from '@/utils'
 const service = axios.create({
   baseURL: API_BASE_URL,
   // withCredentials: true, // send cookies when cross-domain requests
-  timeout: 10000 // request timeout
+  timeout: 100000 // request timeout
 })
 
 let timer

@@ -11,7 +11,7 @@ const skills = [
     rate: 3
   },
   {
-    label: 'react vue 框架：熟练掌握使用！',
+    label: 'react 框架：熟练掌握使用！',
     rate: 3
   },
   {
@@ -34,29 +34,23 @@ const MyInfo = () => {
       <Divider orientation='left'>博客简述</Divider>
       <p>本博客使用的技术为 react hooks + antd + koa2 + mysql</p>
       <p>
-        源码地址为 <Href href='https://github.com/gershonv/react-blog'>github</Href>
+        源码地址为 <Href href='https://github.com/zxgreatT/blog'>github</Href>
         ，仅供参考，不做商业用途！
       </p>
 
       <Divider orientation='left'>关于我</Divider>
 
       <ul className='about-list'>
-        <li>姓名：郭少威</li>
+        <li>姓名：田梓轩</li>
         <li>学历专业：本科 软件工程</li>
         <li>
           联系方式：
-          <Icon type='qq' /> 434358603
+          <Icon type='qq' /> 906431137
           <Divider type='vertical' />
           <SvgIcon type='iconemail' style={{ marginRight: 5, transform: 'translateY(2px)' }} />
-          <a href='mailto:gershonv@163.com'>gershonv@163.com</a>
+          <a href='mailto:906431137@qq.com'>906431137@qq.com</a>
         </li>
-        <li>坐标：广州市</li>
-        <li>
-          其他博客地址：
-          <Href href='https://gershonv.github.io/'>hexo 博客</Href>
-          <Divider type='vertical' />
-          <Href href='https://juejin.im/user/5acac6c4f265da2378408f92'>掘金主页</Href>
-        </li>
+        <li>坐标：上海市</li>
         <li>
           技能
           <ul>
@@ -72,15 +66,15 @@ const MyInfo = () => {
           其他
           <ul>
             <li>常用开发工具： vscode、webstorm、git</li>
-            <li>熟悉的 UI 工具： antd、element-ui、vux</li>
-            <li>良好的代码习惯： 略微代码洁癖、注释规范 jsdoc</li>
+            <li>熟悉的 UI 工具： antd</li>
+            <li>良好的代码习惯：ESlint编码 喜欢写注释 </li>
           </ul>
         </li>
         <li>
           个人
           <ul>
             <li>偶尔玩玩游戏、看看书</li>
-            <li>欢迎交流！</li>
+            <li>喜欢独处</li>
           </ul>
         </li>
       </ul>

@@ -28,7 +28,7 @@ function SearchButton(props) {
 
   return (
     <div id='search-box'>
-      <Icon type='search' className='search-icon' onClick={e => props.history.push(`/?page=1&keyword=${keyword}`)} />
+      <Icon type='search' className='search-icon' onClick={handleSubmit} />
       <Input
         type='text'
         value={keyword}

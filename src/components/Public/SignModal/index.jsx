@@ -63,7 +63,7 @@ function SignModal(props) {
   function compareToFirstPassword(rule, value, callback) {
     const form = props.form
     if (value && value !== form.getFieldValue('password')) {
-      callback('Two passwords that you enter is inconsistent!')
+      callback('两次密码输入不一致!')
     } else {
       callback()
     }
@@ -81,12 +81,12 @@ function SignModal(props) {
           <>
             <FormItem label='用户名'>
               {getFieldDecorator('account', {
-                rules: [{ required: true, message: 'Username is required' }]
+                rules: [{ required: true, message: '用户名不存在！' }]
               })(<Input placeholder='请输入用户名' />)}
             </FormItem>
             <FormItem label='密码'>
               {getFieldDecorator('password', {
-                rules: [{ required: true, message: 'Password is required' }]
+                rules: [{ required: true, message: '密码错误！' }]
               })(<Input placeholder='请输入密码' type='password' />)}
             </FormItem>
           </>
@@ -95,18 +95,18 @@ function SignModal(props) {
             <>
               <FormItem label='用户名'>
                 {getFieldDecorator('username', {
-                  rules: [{ required: true, message: 'Username is required' }]
+                  rules: [{ required: true, message: '用户名已经存在！' }]
                 })(<Input placeholder='请输入用户名' />)}
               </FormItem>
               <FormItem label='密码'>
                 {getFieldDecorator('password', {
-                  rules: [{ required: true, message: 'Password is required' }]
+                  rules: [{ required: true, message: '请填写密码！' }]
                 })(<Input placeholder='请输入密码' type='password' />)}
               </FormItem>
               <FormItem label='确认密码'>
                 {getFieldDecorator('confirm', {
                   rules: [
-                    { required: true, message: 'Password is required' },
+                    { required: true, message: '请填写密码！' },
                     { validator: compareToFirstPassword }
                   ]
                 })(<Input placeholder='确认密码' type='password' />)}
@@ -114,8 +114,8 @@ function SignModal(props) {
               <FormItem label='邮箱'>
                 {getFieldDecorator('email', {
                   rules: [
-                    { type: 'email', message: 'The input is not valid E-mail!' },
-                    { required: true, message: 'Please input your E-mail!' }
+                    { type: 'email', message: '请输入正确的邮箱格式！' },
+                    { required: true, message: '请填写邮箱信息！' }
                   ]
                 })(<Input placeholder='请输入您的邮箱' />)}
               </FormItem>

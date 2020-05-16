@@ -89,7 +89,7 @@ function UploadModal(props) {
       confirmLoading.setFalse()
       setFalse()
       notification.success({
-        message: 'upload article success',
+        message: '导入文章成功',
         description: `insert ${response.insertList.length} article and update ${response.updateList.length} article`
       })
     }).catch(error => {
@@ -122,9 +122,9 @@ function UploadModal(props) {
         <p className='ant-upload-drag-icon'>
           <Icon type='inbox' />
         </p>
-        <p className='ant-upload-text'>Click or drag file to this area to upload</p>
+        <p className='ant-upload-text'>单击或将文件拖到该区域以上传</p>
         <p className='ant-upload-hint'>
-          Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
+          支持单次和多次文件上传
         </p>
       </Upload.Dragger>
 

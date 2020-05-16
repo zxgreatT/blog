@@ -33,7 +33,7 @@ function Archives(props) {
             <Fragment key={i}>
               {i === 0 && (
                 <Timeline.Item>
-                  <span className='desc'>{`Nice! ${pagination.total} posts in total. Keep on posting.`}</span>
+                  <span className='desc'>{`非常棒！ 总共找到了${pagination.total}篇博文  保持更新哦！`}</span>
                   <br />
                   <br />
                 </Timeline.Item>

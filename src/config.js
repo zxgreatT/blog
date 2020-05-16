@@ -13,17 +13,17 @@ export const HEADER_BLOG_NAME = 'GreatT的博客' // header title 显示的名�
 
 // === sidebar
 export const SIDEBAR = {
-  avatar: require('@/assets/images/avatar.jpeg'), // 侧边栏头像
+  avatar: require('@/assets/images/GreatT.jpg'), // 侧边栏头像
   title: 'GreatT', // 标题
-  subTitle: '前端打杂人员，略微代码洁癖', // 子标题
+  subTitle: '热爱生活，努力成为更好的自己', // 子标题
   // 个人主页
   homepages: {
     github: {
-      link: 'https://github.com/gershonv',
+      link: 'https://github.com/zxgreatT',
       icon: <Icon type='github' theme='filled' className='homepage-icon' />
     },
     juejin: {
-      link: 'https://juejin.im/user/5acac6c4f265da2378408f92',
+      link: 'https://juejin.im/user/5cb5c151f265da038860ac75',
       icon: <SvgIcon type='iconjuejin' className='homepage-icon' />
     }
   }
@@ -50,7 +50,7 @@ export const ABOUT = {
 
 // 公告 announcement
 export const ANNOUNCEMENT = {
-  enable: true, // 是否开启
+  enable: false, // 是否开启
   content: (
     <>
       由于服务器期限将至 / ssl 证书过期 / 域名过期，请访问

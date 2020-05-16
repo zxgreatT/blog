@@ -59,7 +59,7 @@ function AdminUser(props) {
         title: '操作',
         render: (userId, record) => (
           <Popconfirm
-            title='Are you sure？'
+            title='是否删除该用户？'
             onConfirm={e => updateList(() => axios.delete(`/user/${userId}`))}>
             <a className='delete-text'>Delete</a>
           </Popconfirm>
